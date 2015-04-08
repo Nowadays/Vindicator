@@ -1,10 +1,10 @@
 #!/bin/bash
 
-sdir="/home/ryan/Kernels/Vindicator"
-udir="/home/ryan/Kernels/Vindicator/lk.utils"
-outdir="/home/ryan/Kernels/Vindicator_Out"
+sdir="~/Vindicator"
+udir="~/Vindicator/lk.utils"
+outdir="~/Vindicator_Out"
 device="shamu"
-cc="/home/ryan/VChain/bin/arm-eabi-"
+cc="~/arm-eabi-5.0/bin/arm-eabi-"
 filename="Vindicator.1.8.zip"
 
 compile() {
@@ -15,7 +15,7 @@ compile() {
   export KBUILD_BUILD_HOST=Xile
   make clean && make mrproper
   make lk_defconfig
-  make -j6
+  make -j8
 }
 
 ramdisk() {
