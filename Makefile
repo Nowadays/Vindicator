@@ -599,7 +599,7 @@ endif
 # Handle stack protector mode.
 ifdef CONFIG_CC_STACKPROTECTOR
   stackp-flag := -fstack-protector
-  ifeq ($(call cc-option, $(stackp-flag)),)
+  ifeq ($(call cc-option, $(stackp-flag)))
     $(warning Cannot use CONFIG_CC_STACKPROTECTOR: \
 	      -fstack-protector not supported by compiler))
   endif
